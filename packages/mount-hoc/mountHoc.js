@@ -1,12 +1,3 @@
-/**
- * Helper function that:
- *
- * - creates a mockStore with given state
- * - connects the component to the redux-store
- * - mounts a component with enzyme
- * - allows to pass `contextTypes`, which will automatically added as props to the mounted component
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import createMockStore from '@mt-testutils/mock-store';

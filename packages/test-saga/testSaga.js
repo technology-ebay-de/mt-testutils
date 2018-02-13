@@ -1,38 +1,3 @@
-/**
- * Allows easy testing of redux-sagas without having to mock anything.
- *
- * Usage:
- *
- * let's assume we have a generator function like this:
- *
- *   function* mySaga() {
- *      try {
- *          const value1 = put(someAction);
- *          yield value1;
- *      } catch (e) {
- *          yield 'ERROR';
- *      }
- *   }
- *
- *  With this helper function, we can easily test the generator, by writing one `it` test per yield
- *  expression:
- *
- *  testSaga(mySaga(), () => {
- *      it('should yield a put', nextYield => {
- *          nextYield.should.equal(put(someAction));
- *          return 'hello world'
- *      });
- *      it ('should yield the return value from last yield', nextYield => {
- *          nextYield.should.equal('hello world');
- *          return new Error('ERROR');
- *      });
- *      it ('should yield the error thrown by last yield', nextYield => {
- *          nextYield.should.equal('ERROR');
- *      });
- *  });
- *
- */
-
 import createClonableIterator from './utils/createClonableIterator';
 
 const origIt = global.it;
