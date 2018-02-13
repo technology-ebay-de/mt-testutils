@@ -35,6 +35,10 @@
     "url": "git@github.corp.ebay.com:MT/mt-testutils.git"
   },
   "author": "Patrick Hund <pahund@team.mobile.de>",
+  "contributors": [
+    "Ninja Maaß <jmaass@team.mobile.de>",
+    "Daniel Schäfer <danschaefer@team.mobile.de>"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.2.1",
