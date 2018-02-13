@@ -1,2 +1,2 @@
-import testSaga from './testSaga';
+import testSaga from './src/testSaga';
 export default testSaga;

@@ -1,2 +1,2 @@
-import mountHoc from './mountHoc';
+import mountHoc from './src/mountHoc';
 export default mountHoc;

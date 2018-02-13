@@ -1,2 +1,2 @@
-import mockStore from './mockStore';
+import mockStore from './src/mockStore';
 export default mockStore;
