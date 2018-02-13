@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[app/modules/testing/mountHoc] When I call the function with a connected container and call the "setProps" method the component reflects the changed props 1`] = `
+exports[`When I call the function with a connected container and call the "setProps" method the component reflects the changed props 1`] = `
 Object {
   "dispatch": [MockFunction],
   "someContextAvailableToMountedHOC": "someContext",
@@ -40,7 +40,7 @@ Object {
 }
 `;
 
-exports[`[app/modules/testing/mountHoc] When I call the function with a connected container the created component has expected props 1`] = `
+exports[`When I call the function with a connected container the created component has expected props 1`] = `
 Object {
   "dispatch": [MockFunction],
   "someContextAvailableToMountedHOC": "someContext",
@@ -80,7 +80,7 @@ Object {
 }
 `;
 
-exports[`[app/modules/testing/mountHoc] When I call the function with a connected container the created store has expected state 1`] = `
+exports[`When I call the function with a connected container the created store has expected state 1`] = `
 Object {
   "someState": "someStateValue",
 }

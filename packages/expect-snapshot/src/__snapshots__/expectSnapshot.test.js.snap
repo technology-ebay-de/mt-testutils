@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[app/modules/testing/expectRenderedToMatchSnapshot] renders correctly 1`] = `
+exports[`My mock component renders correctly 1`] = `
 <div>
   test
 </div>

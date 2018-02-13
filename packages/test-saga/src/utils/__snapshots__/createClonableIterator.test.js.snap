@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[app/modules/testing/utils/createClonableIterator] when creating a clonable iterator the clone of the resulting iterator can be iterated on 1`] = `
+exports[`When creating a clonable iterator the clone of the resulting iterator can be iterated on 1`] = `
 Array [
   Object {
     "done": false,
@@ -21,7 +21,7 @@ Array [
 ]
 `;
 
-exports[`[app/modules/testing/utils/createClonableIterator] when creating a clonable iterator the clone of the resulting iterator should behave independently from original iterator 1`] = `
+exports[`When creating a clonable iterator the clone of the resulting iterator should behave independently from original iterator 1`] = `
 Array [
   Object {
     "done": false,
@@ -42,7 +42,7 @@ Array [
 ]
 `;
 
-exports[`[app/modules/testing/utils/createClonableIterator] when creating a clonable iterator the returned iterator can be iterated on 1`] = `
+exports[`When creating a clonable iterator the returned iterator can be iterated on 1`] = `
 Array [
   Object {
     "done": false,

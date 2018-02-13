@@ -3,6 +3,6 @@ import expectSnapshot from './expectSnapshot';
 
 const mockComponent = <div>test</div>;
 
-describe('[app/modules/testing/expectRenderedToMatchSnapshot]', () => {
+describe('My mock component', () => {
     it('renders correctly', () => expectSnapshot(mockComponent));
 });
