@@ -21,7 +21,7 @@ export default (
     const childContextTypes = createChildContextTypesFromContext(context);
     const _getContext = compose(getContext(getContextTypes));
     const store = createMockStore(state);
-    const EnhancedComponent = connect()(enhancer(_getContext(props2 => <WrappedComponent {...props2} />)));
+    const EnhancedComponent = connect()(enhancer(_getContext(innerProps => <WrappedComponent {...innerProps} />)));
     const wrapper = mount(<EnhancedComponent store={store} {...props} />, { context, childContextTypes });
     const component = wrapper.find(WrappedComponent);
     const unmount = wrapper.unmount.bind(wrapper);
