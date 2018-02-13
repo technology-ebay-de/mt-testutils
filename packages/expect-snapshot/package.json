@@ -1,0 +1,14 @@
+{
+  "name": "@mt-testutils/expect-snapshot",
+  "version": "0.0.1",
+  "description": "Testing utility function to assert that a rendered React component matches a Jest snapshot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Hund <pahund@team.mobile.de> (https://ebaytech.berlin/)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-test-renderer": "*"
+  }
+}

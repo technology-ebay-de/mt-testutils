@@ -1,0 +1,34 @@
+/**
+ * Helper function that:
+ *
+ * - creates a mockStore with given state
+ * - connects the component to the redux-store
+ * - mounts a component with enzyme
+ * - allows to pass `contextTypes`, which will automatically added as props to the mounted component
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import createMockStore from '@mt-testutils/mock-store';
+import { mount } from 'enzyme';
+import { compose, getContext } from 'recompose';
+import { connect } from 'react-redux';
+
+export default (
+    enhancer,
+    { props = {}, state = {}, context = {}, getContextTypes = {}, WrappedComponent = () => <div>wrapped</div> } = {}
+) => {
+    const childContextTypes = createChildContextTypesFromContext(context);
+    const _getContext = compose(getContext(getContextTypes));
+    const store = createMockStore(state);
+    const EnhancedComponent = connect()(enhancer(_getContext(props2 => <WrappedComponent {...props2} />)));
+    const wrapper = mount(<EnhancedComponent store={store} {...props} />, { context, childContextTypes });
+    const component = wrapper.find(WrappedComponent);
+    const unmount = wrapper.unmount.bind(wrapper);
+    const setProps = wrapper.setProps.bind(wrapper);
+    return { store, component, unmount, setProps, wrapper, WrappedComponent };
+};
+
+function createChildContextTypesFromContext(context) {
+    return Object.keys(context).reduce((propTypes, key) => ({ ...propTypes, [key]: PropTypes.any }), {});
+}

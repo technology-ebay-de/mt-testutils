@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[app/modules/testing/mountHoc] When I call the function with a connected container and call the "setProps" method the component reflects the changed props 1`] = `
+Object {
+  "dispatch": [MockFunction],
+  "someContextAvailableToMountedHOC": "someContext",
+  "someContextFromHOC": "someContextValue",
+  "someProp": "somePropValue",
+  "someProp2": "somePropValue2",
+  "someProp3": "somePropValue3",
+  "somePropFromState": "someStateValue2",
+  "store": Object {
+    "close": [Function],
+    "dispatch": [MockFunction],
+    "getState": [Function],
+    "reset": [Function],
+    "setState": [Function],
+    "subscribe": [Function],
+  },
+  "storeSubscription": Subscription {
+    "listeners": Object {
+      "clear": [Function],
+      "get": [Function],
+      "notify": [Function],
+      "subscribe": [Function],
+    },
+    "onStateChange": [Function],
+    "parentSub": undefined,
+    "store": Object {
+      "close": [Function],
+      "dispatch": [MockFunction],
+      "getState": [Function],
+      "reset": [Function],
+      "setState": [Function],
+      "subscribe": [Function],
+    },
+    "unsubscribe": undefined,
+  },
+  "testHandler": [Function],
+}
+`;
+
+exports[`[app/modules/testing/mountHoc] When I call the function with a connected container the created component has expected props 1`] = `
+Object {
+  "dispatch": [MockFunction],
+  "someContextAvailableToMountedHOC": "someContext",
+  "someContextFromHOC": "someContextValue",
+  "someProp": "somePropValue",
+  "someProp2": "somePropValue2",
+  "someProp3": "somePropValue3",
+  "somePropFromState": "someStateValue2",
+  "store": Object {
+    "close": [Function],
+    "dispatch": [MockFunction],
+    "getState": [Function],
+    "reset": [Function],
+    "setState": [Function],
+    "subscribe": [Function],
+  },
+  "storeSubscription": Subscription {
+    "listeners": Object {
+      "clear": [Function],
+      "get": [Function],
+      "notify": [Function],
+      "subscribe": [Function],
+    },
+    "onStateChange": [Function],
+    "parentSub": undefined,
+    "store": Object {
+      "close": [Function],
+      "dispatch": [MockFunction],
+      "getState": [Function],
+      "reset": [Function],
+      "setState": [Function],
+      "subscribe": [Function],
+    },
+    "unsubscribe": undefined,
+  },
+  "testHandler": [Function],
+}
+`;
+
+exports[`[app/modules/testing/mountHoc] When I call the function with a connected container the created store has expected state 1`] = `
+Object {
+  "someState": "someStateValue",
+}
+`;
