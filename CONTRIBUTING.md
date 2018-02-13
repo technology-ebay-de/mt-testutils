@@ -48,7 +48,9 @@ To test your changes, you can publish a beta version:
     * _patch_ – small, backwards compatible contribution, typically a bugfix
     * _minor_ – new feature, backwards compatible
     * _major_ – breaking changes
+    
 * According to your choice, run one of these commands:
+
 
     npm run publish-beta-patch
     npm run publish-beta-minor
