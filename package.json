@@ -4,15 +4,27 @@
   "description": "Utility functions to make testing React/Redux applications with Jest easier",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config jest/config.js",
-    "precommit": "lint-staged"
+    "test": "jest",
+    "precommit": "lint-staged",
+    "postinstall": "lerna bootstrap",
+    "publish": "lerna publish --registry https://nexus.corp.mobile.de/nexus/content/repositories/npm-internal/ ${@:1}",
+    "publish-beta": "lerna publish --npm-tag=beta --cd-version=prerelease --preid=beta --registry https://nexus.corp.mobile.de/nexus/content/repositories/npm-internal/ ${@:1}",
+    "publish-beta-patch": "lerna publish --npm-tag=beta --cd-version=prepatch --preid=beta --registry https://nexus.corp.mobile.de/nexus/content/repositories/npm-internal/ ${@:1}",
+    "publish-beta-minor": "lerna publish --npm-tag=beta --cd-version=preminor --preid=beta --registry https://nexus.corp.mobile.de/nexus/content/repositories/npm-internal/ ${@:1}",
+    "publish-beta-major": "lerna publish --npm-tag=beta --cd-version=premajor --preid=beta --registry https://nexus.corp.mobile.de/nexus/content/repositories/npm-internal/ ${@:1}"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupJest.js",
+    "transformIgnorePatterns": [
+      "<rootDir>.*(node_modules)(?!.*@mt-.*).*$"
+    ]
   },
   "lint-staged": {
     "*.js": [
       "prettier --write",
       "eslint --fix",
       "git add",
-      "jest --config jest/config.js --bail --findRelatedTests"
+      "jest --bail --findRelatedTests"
     ]
   },
   "scripty": {
@@ -28,7 +40,6 @@
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.2.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",

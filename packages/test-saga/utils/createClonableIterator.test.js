@@ -20,10 +20,8 @@ describe('[app/modules/testing/utils/createClonableIterator]', () => {
                 iterator.clone.should.be.a('function');
             });
             it('can be iterated on', () => {
-                iterator.next().should.deep.equal({ value: 1, done: false });
-                iterator.next().should.deep.equal({ value: 2, done: false });
-                iterator.next().should.deep.equal({ value: 3, done: false });
-                iterator.next().should.deep.equal({ value: undefined, done: true });
+                const nextSteps = [iterator.next(), iterator.next(), iterator.next(), iterator.next()];
+                expect(nextSteps).toMatchSnapshot();
             });
         });
         describe('the clone of the resulting iterator', () => {
@@ -38,14 +36,17 @@ describe('[app/modules/testing/utils/createClonableIterator]', () => {
                 clonedIterator.clone.should.be.a('function');
             });
             it('can be iterated on', () => {
-                clonedIterator.next().should.deep.equal({ value: 1, done: false });
-                clonedIterator.next().should.deep.equal({ value: 2, done: false });
-                clonedIterator.next().should.deep.equal({ value: 3, done: false });
-                clonedIterator.next().should.deep.equal({ value: undefined, done: true });
+                const nextSteps = [
+                    clonedIterator.next(),
+                    clonedIterator.next(),
+                    clonedIterator.next(),
+                    clonedIterator.next()
+                ];
+                expect(nextSteps).toMatchSnapshot();
             });
-            it('should behave independend from original iterator', () => {
-                iterator.next().should.deep.equal({ value: 1, done: false });
-                iterator.next().should.deep.equal({ value: 2, done: false });
+            it('should behave independently from original iterator', () => {
+                const nextSteps = [iterator.next(), iterator.next(), iterator.next(), iterator.next()];
+                expect(nextSteps).toMatchSnapshot();
             });
         });
         describe('and cloning an already started iterator', () => {
@@ -55,7 +56,7 @@ describe('[app/modules/testing/utils/createClonableIterator]', () => {
                 clonedIterator = iterator.clone();
             });
             describe('the two iterators', () => {
-                it('iterate independantly from each other', () => {
+                it('iterate independently from each other', () => {
                     iterator.next().value.should.equal(2);
                     clonedIterator.next().value.should.equal(2);
                 });

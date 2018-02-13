@@ -1,13 +1,9 @@
-import chai from 'chai';
-import sinonChai from 'sinon-chai';
-import chaiAsPromised from 'chai-as-promised';
-import chaiEnzyme from 'chai-enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-if (!global._babelPolyfill) {
-    require('babel-polyfill');
-}
+const chai = require('chai');
+const sinonChai = require('sinon-chai');
+const chaiAsPromised = require('chai-as-promised');
+const chaiEnzyme = require('chai-enzyme');
+const { configure } = require('enzyme');
+const Adapter = require('enzyme-adapter-react-16');
 
 chai.should();
 chai.use(sinonChai);
