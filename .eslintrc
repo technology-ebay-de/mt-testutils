@@ -11,7 +11,6 @@
   },
   "parser": "babel-eslint",
   "plugins": ["prettier"],
-
   "overrides": [
     // Special settings for jest tests
     {

@@ -27,9 +27,6 @@
       "jest --bail --findRelatedTests"
     ]
   },
-  "scripty": {
-    "silent": true
-  },
   "repository": {
     "type": "git",
     "url": "git@github.corp.ebay.com:MT/mt-testutils.git"
@@ -70,7 +67,6 @@
     "react-test-renderer": "^16.2.0",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
-    "scripty": "^1.7.2",
     "sinon": "^4.3.0",
     "sinon-chai": "^2.14.0"
   }
