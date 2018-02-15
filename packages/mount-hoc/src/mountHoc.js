@@ -17,7 +17,18 @@ export default (
     const component = wrapper.find(WrappedComponent);
     const unmount = wrapper.unmount.bind(wrapper);
     const setProps = wrapper.setProps.bind(wrapper);
-    return { store, component, unmount, setProps, wrapper, WrappedComponent };
+    return {
+        store,
+        component,
+        unmount,
+        setProps,
+        wrapper,
+        WrappedComponent,
+        update() {
+            wrapper.update();
+            return wrapper.find(WrappedComponent);
+        }
+    };
 };
 
 function createChildContextTypesFromContext(context) {
