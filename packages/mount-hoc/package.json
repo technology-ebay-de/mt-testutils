@@ -1,6 +1,6 @@
 {
   "name": "@mt-testutils/mount-hoc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A helper function for Jest unit tests that creates higher-order components",
   "main": "index.js",
   "scripts": {
