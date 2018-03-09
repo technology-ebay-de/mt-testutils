@@ -1,6 +1,6 @@
 {
   "name": "@mt-testutils/mount-hoc",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A helper function for Jest unit tests that creates higher-order components",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@mt-testutils/mock-store": "^1.0.3"
+    "@mt-testutils/mock-store": "^1.0.4"
   },
   "peerDependencies": {
     "enzyme": "*",

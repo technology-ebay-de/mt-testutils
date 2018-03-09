@@ -1,6 +1,6 @@
 {
   "name": "@mt-testutils/test-saga",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Allows easy testing of Redux sagas without having to mock anything",
   "main": "index.js",
   "scripts": {

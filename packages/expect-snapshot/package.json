@@ -1,6 +1,6 @@
 {
   "name": "@mt-testutils/expect-snapshot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Testing utility function to assert that a rendered React component matches a Jest snapshot",
   "main": "index.js",
   "scripts": {
