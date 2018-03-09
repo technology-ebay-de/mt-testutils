@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "author": "Patrick Hund <pahund@team.mobile.de> (https://ebaytech.berlin/)",
   "contributors": [
     "Ninja Maaß <jmaass@team.mobile.de>",
