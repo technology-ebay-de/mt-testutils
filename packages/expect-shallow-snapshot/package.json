@@ -1,6 +1,6 @@
 {
   "name": "@mt-testutils/expect-shallow-snapshot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Testing utility function to assert that a shallow-rendered React component matches a Jest snapshot",
   "main": "index.js",
   "scripts": {
