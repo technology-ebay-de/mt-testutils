@@ -1,7 +1,7 @@
 {
-  "name": "@mt-testutils/mount-hoc",
-  "version": "1.0.7",
-  "description": "A helper function for Jest unit tests that creates higher-order components",
+  "name": "@mt-testutils/expect-shallow-snapshot",
+  "version": "0.0.1",
+  "description": "Testing utility function to assert that a shallow-rendered React component matches a Jest snapshot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,15 +16,7 @@
     "Daniel Schäfer <danschaefer@team.mobile.de>"
   ],
   "license": "MIT",
-  "dependencies": {
-    "@mt-testutils/mock-store": "^1.0.5"
-  },
   "peerDependencies": {
-    "enzyme": "*",
-    "prop-types": "*",
-    "react": "*",
-    "react-redux": "*",
-    "recompose": "*",
-    "redux": "*"
+    "enzyme": "*"
   }
 }
